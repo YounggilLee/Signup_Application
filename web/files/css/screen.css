@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29-Nov-2016, 16:16:19
+    Author     : yglee
+*/
+
+/* CSS for Assignment 3 */
+
+body {
+	padding:0;
+	margin:0;
+	height:100%;
+	font-family:verdana, helvetica, sans-serif;
+    font-size:12px;
+}
+p {
+	margin:0 0 1em 0; /* bottom only */
+}
+img {
+	border:none;
+}
+header, section, footer, aside, nav, article, figure { /* for legacy browser */
+	display:block;
+}
+h1 {
+    border-bottom:1px solid #aaa;
+    margin:0;
+}
+table, th, td {
+    border:1px solid #ddd;
+    border-collapse:collapse;
+    padding:0.2em;
+}
+tr:nth-child(odd) {
+ background-color:#eee;
+}
+.contentblock {
+    margin:10px;
+}
+.centerblock {
+    margin:0 auto;
+    width:60%;
+}
+.leftwrap {
+    width:210px;
+    float:left;
+}
+.rightwrap {
+    margin-left:210px;
+    background-color:#eee;
+}
+.leftblock {
+    padding:5px;
+    border-bottom:1px solid #aaa;
+}
+.rightblock {
+    padding:5px;
+    border-left:1px solid #aaa;
+    color:#aaa;
+    background-color:#eee;
+}
+.innerblock {
+    padding:5px;
+}
+.center {
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+.footer {
+	color:#aaa;
+	padding:5px;
+	text-align:right;
+}
+.row {
+    margin:5px 0;
+}
+.col1 {
+    width:6em;
+    float:left;
+    text-align:right;
+    box-sizing:border-box;
+}
+.col2 {
+    width:8em;
+    box-sizing:border-box;
+}
+.col3 {
+    width:15em;
+    text-align:right;
+    float:left;
+}
+.col4 {
+    width:12em;
+    box-sizing:border-box;
+}
+.red {
+    color:#f00;
+}
