@@ -1,48 +1,52 @@
-<%-- 
-    Document   : mainPage
-    Created on : 29-Nov-2016, 15:52:59
-    Author     : yglee
---%>
+<!--
+Author:  Younggil Lee
+  Student ID: 991 395 505
+  Description: Create sign-up Application that stores users data, handles attributes
+               between logical components. Also, filter to prevent pages from unauthorized access.    
+-->
 
 <%@ page contentType="text/html" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Login Page</title>
+    <head>
+        <meta charset="utf-8">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="files/css/screen.css">
+        <title>Main Page</title>
+    </head>
+    <body>       
 
-<!-- CSS -->
-<link rel="stylesheet" type="text/css" href="files/css/screen.css">
+        <c:if test="${empty user}">
+            <c:redirect url="Login"/>
+        </c:if> 
 
-</head>
-<body>
+        <h3>Welcome EJD HomePage</h3>
+        <br>
+        <p>Hello,${user.nickname} </p>
+        <br>
+        <h4 class="red">Your login information</h4>
+        <br>
+        <p>User ID: ${user.userId}</p> <br>
+        <p>Nick Name: ${user.nickname}</p> <br>
+        <p>Email: ${user.email}</p> <br>
+        <br>
+        <a href="logout.jsp">Log out</a>
+        <br>
+        <h3>Users</h3>
 
-<div class="contentblock">
+        <table>
+            <tr>
+                <th>ID</th><th>Nick Name</th><th>Email</th>
+            </tr>             
+            <c:forEach var="users" items="${users}">
+                <tr>
+                    <th>${users.userId}</th>
+                    <td>${users.nickname}</td>
+                    <td>${users.email}</td>
+                </tr>
+            </c:forEach>            
+        </table>
 
-
-
-    <p class="red">You entered wrong user ID or password.</p>
-
-
-<form action="Login" method="post">
-<div class="row">
-<div class="col1">User ID: </div> <input type="text" name="user">
-</div>
-<div class="row">
-<div class="col1">Password: </div> <input type="password" name="pass">
-</div>
-<br>
-<div class="row">
-<div class="col1">&nbsp; </div> <input type="submit" value="Login">
-</div>
-</form>
-<br>
-
-<p>
-Not register yet? <a href="Register">Sign up here</a>.
-</p>
-
-</div>
-
-</body>
+    </body>
 </html>

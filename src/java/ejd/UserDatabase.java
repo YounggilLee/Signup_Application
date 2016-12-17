@@ -1,5 +1,8 @@
-//Model component to access DB
- 
+//
+//Author:  Younggil Lee
+//  Student ID: 991 395 505
+//  Description: Create sign-up Application that stores users data, handles attributes
+//               between logical components. Also, filter to prevent pages from unauthorized access.  
 package ejd;
 
 import java.sql.ResultSet;
@@ -7,9 +10,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import org.mindrot.jbcrypt.BCrypt;
 
-/**
- * @author yglee
- */
 public class UserDatabase {
     
     // constants
@@ -83,7 +83,7 @@ public class UserDatabase {
                  String id = rs.getString("id");
                  String password = rs.getString("password");
                  String nickname = rs.getString("nickname");
-                  String email = rs.getString("email");
+                 String email = rs.getString("email");
                   
                 user = new User(id, password, nickname, email);
                   

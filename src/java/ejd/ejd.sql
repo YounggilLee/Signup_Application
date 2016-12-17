@@ -1,12 +1,8 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- * Author:  yglee
- * Created: 29-Nov-2016
- */
+//*
+//Author:  Younggil Lee
+//  Student ID: 991 395 505
+//  Description: Create sign-up Application that stores users data, handles attributes
+*/               between logical components. Also, filter to prevent pages from unauthorized access.
 
 
 -- Make sure we are using ejd database

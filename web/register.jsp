@@ -1,10 +1,11 @@
-<%-- 
-    Document   : register
-    Created on : 29-Nov-2016, 15:51:30
-    Author     : yglee
---%>
-
+<!--
+Author:  Younggil Lee
+  Student ID: 991 395 505
+  Description: Create sign-up Application that stores users data, handles attributes
+               between logical components. Also, filter to prevent pages from unauthorized access.    
+-->
 <%@ page contentType="text/html" pageEncoding="utf-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,11 +24,11 @@
 <p>
 Please fill out the form below...
 </p>
+ <c:if test="${not empty message}">
+     <p class ="red">  ${message} </p>
+        </c:if> 
 
-
-
-
-
+ 
 <form action="Register" method="post">
 <div class="row">
 <div class="col3">Choose user ID:</div> <input class="col4" type="text" name="userId">
@@ -50,6 +51,6 @@ Please fill out the form below...
 </form>
 
 </div>
-
+<a href="index.html">Go to Home page.</a>
 </body>
 </html>

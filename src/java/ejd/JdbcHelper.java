@@ -1,4 +1,8 @@
-
+//
+//Author:  Younggil Lee
+//  Student ID: 991 395 505
+//  Description: Create sign-up Application that stores users data, handles attributes
+//               between logical components. Also, filter to prevent pages from unauthorized access.  
 
 package ejd;
 
